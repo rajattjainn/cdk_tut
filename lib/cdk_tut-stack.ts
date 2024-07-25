@@ -13,7 +13,7 @@ export class CdkTutStack extends cdk.Stack {
     new CodePipeline (this, 'Pipeline', {
       pipelineName: 'TestPipeline',
       synth: new ShellStep ('Synth', {
-        input: CodePipelineSource.gitHub('rajattjainn/firstprinciples/cdk_tuts', 'main'),
+        input: CodePipelineSource.gitHub('rajattjainn/cdk_tut', 'main'),
       commands: ['npm ci',
         'npm run build',
         'npx cdk synth']
